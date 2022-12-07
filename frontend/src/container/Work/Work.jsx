@@ -5,7 +5,9 @@ import { AppWrap } from '../../wrapper';
 import { client, urlFor } from '../../client';
 import './Work.scss';
 
-const categories = ['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'];
+//TODO:Get tags/categories from client
+//UIUX
+const categories = ['Web App', 'React JS', 'All'];
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -13,7 +15,18 @@ const Work = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
 
-  const handleWorkFilter = (item) => {};
+  const handleWorkFilter = (item) => {
+    setActiveFilter(item);
+    setAnimateCard({ y: 100, opacity: 0 });
+    setTimeout(() => {
+      setAnimateCard({ y: 0, opacity: 1 });
+      if (item === 'All') {
+        setFilterWork(works);
+      } else {
+        setFilterWork(works.filter((work) => work.tags.includes(item)));
+      }
+    }, 500);
+  };
 
   useEffect(() => {
     const query = '*[_type == "works"]';
