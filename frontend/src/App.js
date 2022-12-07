@@ -6,11 +6,11 @@ import './App.scss';
 
 const App = () => {
   return (
-    <div class="app">
+    <div className="app">
       <Navbar />
       <Header />
       <About />
-      {/* <Work /> */}
+      <Work />
       {/* <Skills /> */}
       {/* <Testimonial /> */}
       {/* <Footer /> */}
