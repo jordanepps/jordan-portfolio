@@ -3,6 +3,7 @@ import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 // import { images } from '../../constants';
 import './Navbar.scss';
+//TODO:center nav items
 
 const navItems = ['home', 'about', 'work', 'skills', 'contact'];
 

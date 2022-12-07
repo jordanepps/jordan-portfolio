@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
+import { AppWrap } from '../../wrapper';
 import './Header.scss';
 
 const scaleVariants = {
@@ -19,7 +20,7 @@ const headerImages = [images.figma, images.next, images.sass];
 
 const Header = () => {
   return (
-    <div id="home" className="app__header app__flex">
+    <div className="app__header app__flex">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -48,9 +49,6 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        {/* 
-        //TODO: Change profile image
-         */}
         <img src={images.profile} alt="" />
         <motion.img
           whileInView={{ scale: [0, 1] }}
@@ -75,4 +73,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AppWrap(Header, 'home');
