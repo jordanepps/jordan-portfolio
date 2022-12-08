@@ -16,7 +16,6 @@ const Skills = () => {
 
     client.fetch(skillsQuery).then((data) => setSkills(data));
     client.fetch(expQuery).then((data) => setExp(data));
-    console.log('refresh');
   }, []);
 
   return (
@@ -62,10 +61,13 @@ const Skills = () => {
                       <h4 className="bold.text">{work.name}</h4>
                       <p className="p-text">{work.company}</p>
                     </motion.div>
-                    <Tooltip
+                    {/*
+                     //TODO: Fix issue where tooltip causes page to scroll past end  
+                     */}
+                    {/* <Tooltip
                       anchorId={(work.name + i).replace(/ /g, '')}
                       className="skills-tooltip"
-                    />
+                    /> */}
                   </React.Fragment>
                 ))}
               </motion.div>
