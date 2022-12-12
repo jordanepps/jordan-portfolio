@@ -40,6 +40,7 @@ const Header = () => {
              */}
             <p className="p-text">Web Developer</p>
             <p className="p-text">Freelancer</p>
+            <p className="p-text">certified technician</p>
           </div>
         </div>
       </motion.div>

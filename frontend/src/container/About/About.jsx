@@ -35,7 +35,10 @@ const About = () => {
               {about.title}
             </h2>
             <p className="p-text" style={{ marginTop: 10 }}>
-              {about.description}
+              {/* 
+            //TODO: Update Description
+             */}
+              {/* {about.description} */}
             </p>
           </motion.div>
         ))}
